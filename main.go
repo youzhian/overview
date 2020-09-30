@@ -6,7 +6,7 @@ import (
 	"overview/datasource"
 	"overview/repositories"
 	"overview/services"
-	"overview/web/controllors"
+	"overview/web/controllers"
 	"overview/web/middleware"
 )
 
@@ -52,9 +52,9 @@ func movies(app *mvc.Application) {
 	//初始化控制器
 	// 注意，你可以初始化多个控制器
 	// 你也可以 使用 `movies.Party(relativePath)` 或者 `movies.Clone(app.Party(...))` 创建子应用。
-	app.Handle(new(controllors.MovieControllor))
+	app.Handle(new(controllers.MovieController))
 }
 
 func hello(app *mvc.Application) {
-	app.Handle(new(controllors.HelloControllor))
+	app.Handle(new(controllers.HelloController))
 }
